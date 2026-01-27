@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo negociar tu salario sin morir de nervios | MoneySmart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #111827;
+            --text-secondary: #4b5563;
+            --primary: #111827;
+            --accent: #8b5cf6;
+            /* Violet for Career */
+            --border-color: #e5e7eb;
+            --font-main: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-main);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            /* Reading width */
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .container-nav {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Nav */
+        nav {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        /* Article Header */
+        header {
+            padding: 4rem 0 2rem;
+        }
+
+        .tag {
+            background: #f5f3ff;
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e5e7eb;
+        }
+
+        /* Content */
+        .content {
+            font-size: 1.125rem;
+            color: #374151;
+        }
+
+        .content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #111827;
+            letter-spacing: -0.01em;
+        }
+
+        .content h3 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .content ul,
+        .content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-box {
+            background-color: #f5f3ff;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 2.5rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--text-main);
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .featured-img {
+            width: 100%;
+            height: auto;
+            margin-top: 0;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 5rem;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-color);
+            background-color: #f9fafb;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+
+        .copyright {
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-nav">
+        <nav>
+            <a href="index.html" class="logo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                MoneySmart
+            </a>
+            <a href="index.html" class="back-link">← Volver al inicio</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <header>
+            <span class="tag">Carrera</span>
+            <h1>Cómo negociar tu salario sin morir de nervios</h1>
+
+            <div class="meta">
+                <div class="author-avatar"
+                    style="background-image: url('https://randomuser.me/api/portraits/women/90.jpg'); background-size: cover;">
+                </div>
+                <div>
+                    <strong>Por Elena R.</strong> • <span style="opacity: 0.8">11 Enero 2026</span>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=2070&auto=format&fit=crop"
+                alt="Negociación" class="featured-img">
+        </header>
+
+        <article class="content">
+            <p>Es la conversación más incómoda del mundo laboral. Te sientas frente a RH o tu futuro jefe y preguntan:
+                "¿Cuáles son tus expectativas salariales?". Te sudan las manos. Dices un número al azar. Te dicen que sí
+                inmediatamente. Y luego descubres que tu compañero de al lado gana 20% más por hacer lo mismo.</p>
+
+            <p>No tiene que ser así. Negociar no es pelear, es encontrar un acuerdo.</p>
+
+            <h2>Regla #1: Nunca digas el primer número</h2>
+            <p>Quien dice el primer número pierde el poder en la negociación. Si te preguntan cuánto quieres ganar,
+                responde:</p>
+            <p><em>"Ahora mismo estoy más enfocado en encontrar el rol correcto que en el número exacto. ¿Tienen ustedes
+                    un rango presupuestado para esta posición?"</em></p>
+            <p>Forza a la empresa a revelar sus cartas.</p>
+
+            <h2>Regla #2: Haz tu tarea</h2>
+            <p>No puedes negociar si no sabes tu valor de mercado. Usa Glassdoor, LinkedIn Salaries o pregunta a amigos
+                en el sector. Si el rango de mercado es $25,000 - $35,000 USD, no pidas $20,000.</p>
+
+            <h2>El Script Mágico ("El Silencio")</h2>
+            <p>Cuando te den una oferta, haz esto:</p>
+            <ol>
+                <li>Diles "Gracias".</li>
+                <li>Repite el número de la oferta.</li>
+                <li><strong>CÁLLATE.</strong></li>
+            </ol>
+            <p>El silencio es incómodo. Muchas veces, el reclutador llenará ese silencio con una mejora: "Bueno, quizás
+                podríamos subir a...".</p>
+
+            <div class="cta-box">
+                Si la empresa dice "No hay más presupuesto", negocia otras cosas: más días de vacaciones, bonos por
+                desempeño, o home office permanente. Todo es dinero.
+            </div>
+
+            <h2>Conclusión</h2>
+            <p>Una negociación de 5 minutos puede impactar tus ingresos por los próximos 3 años. Tómate el café, respira
+                hondo, y pide lo que vales.</p>
+
+        </article>
+
+    </div>
+
+    <footer>
+        <div class="container-nav">
+            <div class="footer-links">
+                <a href="aviso-legal.html">Aviso Legal</a>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <a href="terminos-condiciones.html">Términos</a>
+                <a href="politica-cookies.html">Cookies</a>
+            </div>
+            <p class="copyright">© 2026 MoneySmart. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

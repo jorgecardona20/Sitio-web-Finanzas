@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fondo de Emergencia: ¿Cuánto realmente necesito? | MoneySmart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #111827;
+            --text-secondary: #4b5563;
+            --primary: #111827;
+            --accent: #6366f1;
+            /* Changed accent color for this category */
+            --border-color: #e5e7eb;
+            --font-main: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-main);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            /* Reading width */
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .container-nav {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Nav (Simplified version of Index nav) */
+        nav {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        /* Article Header */
+        header {
+            padding: 4rem 0 2rem;
+        }
+
+        .tag {
+            background: #f3f4f6;
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e5e7eb;
+        }
+
+        /* Content */
+        .content {
+            font-size: 1.125rem;
+            color: #374151;
+        }
+
+        .content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #111827;
+            letter-spacing: -0.01em;
+        }
+
+        .content h3 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .content ul,
+        .content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-box {
+            background-color: #f8fafc;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 2.5rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--text-main);
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .featured-img {
+            width: 100%;
+            height: auto;
+            margin-top: 0;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 5rem;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-color);
+            background-color: #f9fafb;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+
+        .copyright {
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-nav">
+        <nav>
+            <a href="index.html" class="logo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                MoneySmart
+            </a>
+            <a href="index.html" class="back-link">← Volver al inicio</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <header>
+            <span class="tag">Básicos</span>
+            <h1>Fondo de Emergencia: ¿Cuánto realmente necesito?</h1>
+
+            <div class="meta">
+                <div class="author-avatar"
+                    style="background-image: url('https://randomuser.me/api/portraits/women/11.jpg'); background-size: cover;">
+                </div>
+                <div>
+                    <strong>Por Sofía R.</strong> • <span style="opacity: 0.8">18 Enero 2026</span>
+                </div>
+            </div>
+
+            <img src="images/fondo-emergencia.png" alt="Fondo de Emergencia" class="featured-img">
+        </header>
+
+        <p>Seamos honestos: la vida pasa. El coche se descompone, tu laptop decide morir la semana de exámenes
+            finales, o peor aún, te enfrentas a un despido inesperado o una emergencia médica. En esos momentos, el
+            dinero no debería ser tu principal preocupación. Ahí es donde entra el superhéroe de las finanzas
+            personales: el <strong>Fondo de Emergencia</strong>.</p>
+
+        <p>Muchas personas viven al día, a una quincena de la quiebra. Tener un fondo de emergencia no es solo
+            "ahorrar", es comprar tu tranquilidad mental. Es saber que, pase lo que pase, tienes un colchón que te
+            amortigua la caída.</p>
+
+        <h2>¿Qué es exactamente y para qué sirve?</h2>
+        <p>Un fondo de emergencia es una cantidad de dinero reservada <strong>exclusivamente</strong> para
+            imprevistos. No es para las vacaciones, no es para el enganche de un coche, y definitivamente no es para
+            comprar el nuevo iPhone.</p>
+
+        <div class="cta-box">
+            La regla de oro: Si puedes planearlo, no es una emergencia. El fondo es para lo <italic>inesperado
+            </italic>.
+        </div>
+
+        <h2>¿Cuánto dinero necesito?</h2>
+        <p>La respuesta clásica es "de 3 a 6 meses de tus gastos fijos". Pero, ¿qué significa eso realmente? Vamos a
+            desglosarlo.</p>
+
+        <h3>Paso 1: Calcula tus "Gastos de Supervivencia"</h3>
+        <p>No se trata de 3 meses de tu sueldo actual, sino de cuánto te cuesta vivir lo básico. Suma:</p>
+        <ul>
+            <li>Renta y servicios (luz, agua, internet)</li>
+            <li>Comida (supermercado, no restaurantes)</li>
+            <li>Transporte indispensable</li>
+            <li>Seguros y deudas mínimas</li>
+        </ul>
+        <p>Si tus gastos fijos son $1,000 USD al mes, tu meta mínima son $3,000 USD.</p>
+
+        <h3>3 meses vs 6 meses: ¿Cuál elijo?</h3>
+        <p>Depende de tu estabilidad:</p>
+        <ul>
+            <li><strong>3 meses:</strong> Si eres soltero, tienes un trabajo estable y vives con tus padres o tienes
+                gastos bajos.</li>
+            <li><strong>6 meses:</strong> Si tienes dependientes (hijos, pareja), eres freelance (ingresos
+                variables) o tienes una hipoteca.</li>
+        </ul>
+
+        <h2>¿Dónde guardo ese dinero?</h2>
+        <p>Aquí es donde muchos fallan. Guardarlo debajo del colchón es peligroso (y pierde valor por la inflación).
+            Meterlo en la bolsa es riesgoso (¿qué tal si necesitas el dinero justo cuando el mercado cae?).</p>
+
+        <p>Necesitas un lugar que cumpla dos requisitos: <strong>Liquidez</strong> (disponible hoy mismo) y
+            <strong>Seguridad</strong> (que no pierda valor).
+        </p>
+
+        <p>Las mejores opciones en México:</p>
+        <ol>
+            <li><strong>Cetesdirecto (Bonddia):</strong> Tienes liquidez diaria (lunes a viernes) y te da
+                rendimientos por encima de la inflación.</li>
+            <li><strong>Cuentas a la vista de SOFIPOS:</strong> Algunas como Nu o Klar ofrecen rendimientos diarios
+                con disponibilidad inmediata 24/7.</li>
+            <li><strong>Apartados bancarios:</strong> Muchos bancos ya permiten crear "sobres" o apartados. Busca
+                uno que de rendimientos (como Hey Banco).</li>
+        </ol>
+
+        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200"
+            alt="Calculando ahorros">
+
+        <h2>Cómo empezar sin sufrir</h2>
+        <p>Ver la meta final de $3,000 USD o $5,000 USD puede ser abrumador. No intentes juntarlo en un mes.</p>
+
+        <ol>
+            <li><strong>Empieza pequeño:</strong> Tu primera meta es juntar $100 USD. Eso ya te cubre una llanta
+                ponchada o una visita rápida al doctor.</li>
+            <li><strong>La meta de "un mes":</strong> Enfócate en tener un mes de respaldo. Eso ya te pone por
+                delante del 70% de la población.</li>
+            <li><strong>Automatiza:</strong> Configura que, en cuanto caiga tu nómina, se transfieran $50 o $100 USD
+                a tu cuenta de emergencia. Si no lo ves, no lo gastas.</li>
+        </ol>
+
+        <h2>Conclusión</h2>
+        <p>El fondo de emergencia es la base de tu pirámide financiera. No puedes empezar a invertir o a pensar en
+            libertad financiera si cualquier imprevisto te va a obligar a endeudarte. Empieza hoy. Tu "yo" del
+            futuro, estresado por una emergencia, te lo agradecerá profundamente.</p>
+
+        </article>
+
+    </div>
+
+    <footer>
+        <div class="container-nav">
+            <div class="footer-links">
+                <a href="aviso-legal.html">Aviso Legal</a>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <a href="terminos-condiciones.html">Términos</a>
+                <a href="politica-cookies.html">Cookies</a>
+            </div>
+            <p class="copyright">© 2026 MoneySmart. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

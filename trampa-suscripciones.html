@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La trampa de las suscripciones (Gastos Hormiga) | MoneySmart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #111827;
+            --text-secondary: #4b5563;
+            --primary: #111827;
+            --accent: #ec4899;
+            /* Pink for Expenses/Subs */
+            --border-color: #e5e7eb;
+            --font-main: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-main);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            /* Reading width */
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .container-nav {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Nav */
+        nav {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        /* Article Header */
+        header {
+            padding: 4rem 0 2rem;
+        }
+
+        .tag {
+            background: #fdf2f8;
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e5e7eb;
+        }
+
+        /* Content */
+        .content {
+            font-size: 1.125rem;
+            color: #374151;
+        }
+
+        .content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #111827;
+            letter-spacing: -0.01em;
+        }
+
+        .content h3 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .content ul,
+        .content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-box {
+            background-color: #fdf2f8;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 2.5rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--text-main);
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .featured-img {
+            width: 100%;
+            height: auto;
+            margin-top: 0;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 5rem;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-color);
+            background-color: #f9fafb;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+
+        .copyright {
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-nav">
+        <nav>
+            <a href="index.html" class="logo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                MoneySmart
+            </a>
+            <a href="index.html" class="back-link">← Volver al inicio</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <header>
+            <span class="tag">Gastos</span>
+            <h1>La trampa de las suscripciones (Gastos Hormiga)</h1>
+
+            <div class="meta">
+                <div class="author-avatar"
+                    style="background-image: url('https://randomuser.me/api/portraits/men/12.jpg'); background-size: cover;">
+                </div>
+                <div>
+                    <strong>Por David L.</strong> • <span style="opacity: 0.8">14 Enero 2026</span>
+                </div>
+            </div>
+
+            <img src="images/suscripciones.png" alt="Suscripciones" class="featured-img">
+        </header>
+
+        <article class="content">
+            <p>"Solo son $10 USD al mes". Es la mentira más cara que nos decimos a nosotros mismos. En la economía de la
+                suscripción, las empresas han descubierto que si nos cobran poco, pero de manera recurrente, nos
+                olvidamos de cancelar.</p>
+
+            <p>Netflix, Spotify, Amazon Prime, Disney+, Apple iCloud, Gym, Apps de meditación... Haz la suma.
+                Probablemente estés gastando más de $150 USD al mes en servicios que usas poco.</p>
+
+            <h2>El fenómeno de "La muerte por mil cortes"</h2>
+            <p>El problema no es pagar por contenido. El problema es la redundancia. ¿Realmente necesitas Spotify Y
+                YouTube Premium? ¿Necesitas Netflix, HBO Max Y Disney+ al mismo tiempo?</p>
+
+            <h3>Auditoría de Suscripciones (Haz esto hoy)</h3>
+            <ol>
+                <li>Abre el estado de cuenta de tu tarjeta de crédito de los últimos 3 meses.</li>
+                <li>Subraya TODOS los cargos recurrentes.</li>
+                <li>Sé honesto: ¿Cuándo fue la última vez que usaste cada uno?</li>
+                <li>Si no lo has usado en 30 días, cancélalo. Siempre puedes volver a suscribirte en 2 minutos si
+                    realmente lo extrañas.</li>
+            </ol>
+
+            <div class="cta-box">
+                Estrategia "Rotation": Suscríbete a un servicio a la vez. Mira la serie que quieres en Netflix,
+                cancélalo, y luego pásate a HBO para ver esa otra serie. Ahorrarás cientos de dólares al año.
+            </div>
+
+            <h2>La trampa de las pruebas gratuitas</h2>
+            <p>Todos hemos caído. "Prueba gratis 7 días". Lo activamos y nos olvidamos. Las empresas cuentan con ese
+                olvido. Nuestro consejo: En el momento que actives una prueba gratis, pon una alarma en tu calendario
+                para el día 6 que diga "CANCELAR PRUEBA".</p>
+
+            <h2>Conclusión</h2>
+            <p>Tus ingresos fijos son limitados, tus gastos fijos deben ser mínimos. Recupera el control de tu flujo de
+                efectivo mensual eliminando a los vampiros automáticos.</p>
+
+        </article>
+
+    </div>
+
+    <footer>
+        <div class="container-nav">
+            <div class="footer-links">
+                <a href="aviso-legal.html">Aviso Legal</a>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <a href="terminos-condiciones.html">Términos</a>
+                <a href="politica-cookies.html">Cookies</a>
+            </div>
+            <p class="copyright">© 2026 MoneySmart. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

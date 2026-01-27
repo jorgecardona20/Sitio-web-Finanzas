@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo cobrar tus primeros trabajos freelance sin miedo | MoneySmart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #111827;
+            --text-secondary: #4b5563;
+            --primary: #111827;
+            --accent: #8b5cf6;
+            /* Violet for career/freelance */
+            --border-color: #e5e7eb;
+            --font-main: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-main);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            /* Reading width */
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .container-nav {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Nav */
+        nav {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        /* Article Header */
+        header {
+            padding: 4rem 0 2rem;
+        }
+
+        .tag {
+            background: #f5f3ff;
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e5e7eb;
+        }
+
+        /* Content */
+        .content {
+            font-size: 1.125rem;
+            color: #374151;
+        }
+
+        .content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #111827;
+            letter-spacing: -0.01em;
+        }
+
+        .content h3 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .content ul,
+        .content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-box {
+            background-color: #f5f3ff;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 2.5rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--text-main);
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .featured-img {
+            width: 100%;
+            height: auto;
+            margin-top: 0;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 5rem;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-color);
+            background-color: #f9fafb;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+
+        .copyright {
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-nav">
+        <nav>
+            <a href="index.html" class="logo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                MoneySmart
+            </a>
+            <a href="index.html" class="back-link">← Volver al inicio</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <header>
+            <span class="tag">Carrera</span>
+            <h1>Cómo cobrar tus primeros trabajos freelance sin miedo</h1>
+
+            <div class="meta">
+                <div class="author-avatar"
+                    style="background-image: url('https://randomuser.me/api/portraits/men/45.jpg'); background-size: cover;">
+                </div>
+                <div>
+                    <strong>Por Carlos M.</strong> • <span style="opacity: 0.8">05 Enero 2026</span>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
+                alt="Freelance" class="featured-img">
+        </header>
+
+        <article class="content">
+            <p>Es el momento más terrorífico para cualquier nuevo freelancer: te preguntan "¿cuánto cobras?" y tu mente
+                se pone en blanco. Tienes miedo de decir un precio muy alto y perder al cliente, o decir uno muy bajo y
+                terminar trabajando por cacahuates.</p>
+
+            <p>El "síndrome del impostor" ataca fuerte. "Soy nuevo, debería cobrar barato para ganar experiencia",
+                piensas. <strong>¡Error!</strong> Cobrar demasiado barato atrae a los peores clientes.</p>
+
+            <h2>Método 1: Por Proyecto (Recomendado)</h2>
+            <p>Cobrar por hora castiga tu eficiencia. Si eres rápido, ganas menos. Cobrar por proyecto enfoca la
+                conversación en el <strong>valor</strong> que entregas.</p>
+
+            <p><strong>Ejemplo:</strong></p>
+            <ul>
+                <li>Mal: "Cobro $100 la hora por diseñar el logo".</li>
+                <li>Bien: "El diseño de identidad visual completa cuesta $5,000".</li>
+            </ul>
+
+            <h2>Método 2: La fórmula inversa</h2>
+            <p>Si no tienes idea de cuánto cobrar, haz esto:</p>
+            <ol>
+                <li>¿Cuánto quieres ganar al mes? (Ej. $20,000)</li>
+                <li>Súmale 30% para impuestos y seguros (=$26,000)</li>
+                <li>Divide entre las horas PRODUCTIVAS (no trabajas 8 horas reales freelance, más bien 4 o 5).</li>
+                <li>El resultado es tu tarifa mínima por hora. Úsalo de base para calcular proyectos.</li>
+            </ol>
+
+            <div class="cta-box">
+                Nunca envíes el precio solo en un mensaje de WhatsApp. Envía una propuesta PDF formal. Eso
+                automáticamente justifica un precio más alto.
+            </div>
+
+            <h2>Cómo pedir el pago (sin rodeos)</h2>
+            <p>La regla de oro del freelance novato: <strong>50% de anticipo SIEMPRE.</strong></p>
+            <p>No empieces a trabajar sin anticipo. Un cliente serio no tendrá problema en pagar. Un cliente que se
+                niega, probablemente no pensaba pagarte al final.</p>
+
+            <p><strong>Script para cobrar:</strong></p>
+            <p><em>"Hola [Nombre], para comenzar con el proyecto y agendar los tiempos de entrega, requerimos un
+                    anticipo del 50%. Aquí te anexo los datos bancarios. En cuanto quede el depósito, arrancamos
+                    motores."</em></p>
+
+            <h2>Conclusión</h2>
+            <p>Tu trabajo vale. No le estás haciendo un favor al cliente, estás solucionando un problema de su negocio.
+                Cobra con confianza, y si te dicen que no, ese cliente no era para ti.</p>
+
+        </article>
+
+    </div>
+
+    <footer>
+        <div class="container-nav">
+            <div class="footer-links">
+                <a href="aviso-legal.html">Aviso Legal</a>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <a href="terminos-condiciones.html">Términos</a>
+                <a href="politica-cookies.html">Cookies</a>
+            </div>
+            <p class="copyright">© 2026 MoneySmart. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

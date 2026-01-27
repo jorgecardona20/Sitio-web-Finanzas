@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjetas de Crédito: Guía para no pagar intereses | MoneySmart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #111827;
+            --text-secondary: #4b5563;
+            --primary: #111827;
+            --accent: #ef4444;
+            /* Red for Debt/Cards */
+            --border-color: #e5e7eb;
+            --font-main: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-main);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            /* Reading width */
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .container-nav {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Nav */
+        nav {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        /* Article Header */
+        header {
+            padding: 4rem 0 2rem;
+        }
+
+        .tag {
+            background: #fef2f2;
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e5e7eb;
+        }
+
+        /* Content */
+        .content {
+            font-size: 1.125rem;
+            color: #374151;
+        }
+
+        .content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #111827;
+            letter-spacing: -0.01em;
+        }
+
+        .content h3 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .content ul,
+        .content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-box {
+            background-color: #fef2f2;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 2.5rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--text-main);
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .featured-img {
+            width: 100%;
+            height: auto;
+            margin-top: 0;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 5rem;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-color);
+            background-color: #f9fafb;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+
+        .copyright {
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-nav">
+        <nav>
+            <a href="index.html" class="logo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                MoneySmart
+            </a>
+            <a href="index.html" class="back-link">← Volver al inicio</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <header>
+            <span class="tag">Deuda</span>
+            <h1>Tarjetas de Crédito: Guía para no pagar intereses</h1>
+
+            <div class="meta">
+                <div class="author-avatar"
+                    style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg'); background-size: cover;">
+                </div>
+                <div>
+                    <strong>Por Carlos M.</strong> • <span style="opacity: 0.8">10 Enero 2026</span>
+                </div>
+            </div>
+
+            <img src="images/tarjetas-credito.png" alt="Tarjetas de Crédito" class="featured-img">
+        </header>
+
+        <article class="content">
+            <p>La tarjeta de crédito es como una motosierra: una herramienta increíblemente útil si sabes usarla, pero
+                peligrosa si no tienes cuidado. En México, los bancos aman a los clientes "totaleros" (los que pagan
+                todo), pero ganan dinero de los que pagan intereses.</p>
+
+            <p>Aquí te enseño cómo ser del primer grupo y usar la tarjeta a tu favor.</p>
+
+            <h2>La Regla de Oro: Fechas de Corte y Pago</h2>
+            <p>Esto confunde a todos, pero es simple:</p>
+            <ul>
+                <li><strong>Fecha de Corte:</strong> El día que el banco "cierra la cuenta" del mes. Supongamos que es
+                    el día 5.</li>
+                <li><strong>Fecha Límite de Pago:</strong> El día que tienes que pagar esa cuenta. Usualmente es 20 días
+                    después del corte (el día 25).</li>
+            </ul>
+
+            <p><strong>El hack:</strong> Si compras el día 6 (un día después de tu corte), tienes hasta el próximo corte
+                (30 días) + los 20 días de plazo de pago = <strong>50 días de financiamiento gratis</strong>.</p>
+
+            <h2>¿Qué significa ser Totalero?</h2>
+            <p>Significa pagar el monto que dice <strong>"Pago para no generar intereses"</strong>. Ni un peso menos.
+            </p>
+            <p>Si pagas el "Pago Mínimo", entras en una espiral de muerte financiera. Los intereses de las tarjetas en
+                México pueden superar el 70% anual. Nunca pagues el mínimo.</p>
+
+            <h2>Los Beneficios (Puntos y Cashback)</h2>
+            <p>Si eres totalero, la tarjeta te paga a ti.</p>
+            <ul>
+                <li><strong>Cashback:</strong> Tarjetas como Costco Citibanamex, HSBC 2Now o Santander LikeU te regresan
+                    dinero en efectivo por cada compra (del 2% al 4%).</li>
+                <li><strong>Puntos:</strong> Canjeables por vuelos o productos.</li>
+                <li><strong>Historial:</strong> Construir buen crédito te ayudará a sacar un crédito hipotecario barato
+                    en el futuro.</li>
+            </ul>
+
+            <div class="cta-box">
+                Consejo: Usa tu tarjeta como tarjeta de débito. Si no tienes el dinero en tu cuenta de banco para
+                pagarlo HOY, no lo compres con crédito.
+            </div>
+
+            <h2>Conclusión</h2>
+            <p>No le tengas miedo al crédito. Tenle respeto. Una tarjeta de crédito bien usada es la forma más barata de
+                financiarte y obtener beneficios extra por gastar en lo que ya ibas a comprar.</p>
+
+        </article>
+
+    </div>
+
+    <footer>
+        <div class="container-nav">
+            <div class="footer-links">
+                <a href="aviso-legal.html">Aviso Legal</a>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <a href="terminos-condiciones.html">Términos</a>
+                <a href="politica-cookies.html">Cookies</a>
+            </div>
+            <p class="copyright">© 2026 MoneySmart. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

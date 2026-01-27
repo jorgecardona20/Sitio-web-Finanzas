@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Apps de presupuesto que sí vas a usar realmente | MoneySmart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #111827;
+            --text-secondary: #4b5563;
+            --primary: #111827;
+            --accent: #10b981;
+            /* Green for budget/apps */
+            --border-color: #e5e7eb;
+            --font-main: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-main);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            /* Reading width */
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .container-nav {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Nav (Simplified version of Index nav) */
+        nav {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        /* Article Header */
+        header {
+            padding: 4rem 0 2rem;
+        }
+
+        .tag {
+            background: #ecfdf5;
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e5e7eb;
+        }
+
+        /* Content */
+        .content {
+            font-size: 1.125rem;
+            color: #374151;
+        }
+
+        .content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #111827;
+            letter-spacing: -0.01em;
+        }
+
+        .content h3 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .content ul,
+        .content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 2.5rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--text-main);
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .featured-img {
+            width: 100%;
+            height: auto;
+            margin-top: 0;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 5rem;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-color);
+            background-color: #f9fafb;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+
+        .copyright {
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-nav">
+        <nav>
+            <a href="index.html" class="logo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                MoneySmart
+            </a>
+            <a href="index.html" class="back-link">← Volver al inicio</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <header>
+            <span class="tag">Tecnología</span>
+            <h1>5 Apps de presupuesto que sí vas a usar realmente</h1>
+
+            <div class="meta">
+                <div class="author-avatar"
+                    style="background-image: url('https://randomuser.me/api/portraits/women/90.jpg'); background-size: cover;">
+                </div>
+                <div>
+                    <strong>Por Elena R.</strong> • <span style="opacity: 0.8">15 Enero 2026</span>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+                alt="Apps Finanzas" class="featured-img">
+        </header>
+
+        <article class="content">
+            <p>Todos hemos estado ahí: descargas una app de finanzas, pasas dos horas configurando categorías, registras
+                tus gastos diligentemente durante 3 días... y luego la ignoras para siempre. ¿Por qué pasa esto? Porque
+                la mayoría de las apps son demasiado complicadas o requieren demasiado esfuerzo.</p>
+
+            <p>El mejor sistema de presupuesto es el que realmente <strong>usas</strong>. Por eso, hemos probado docenas
+                de aplicaciones y seleccionado las 5 mejores para 2026, pensadas para personas reales (no contadores).
+            </p>
+
+            <h2>1. Wallet (by BudgetBakers)</h2>
+            <p><strong>Lo mejor para:</strong> Quienes quieren ver todo automático.</p>
+            <p>La magia de Wallet es su sincronización bancaria. Conectas tus cuentas de BBVA, Santander, Nu, etc., y la
+                app descarga tus transacciones y las categoriza sola. "Starbucks" se va a Cafetería, "Uber" a
+                Transporte.</p>
+            <ul>
+                <li><strong>Precio:</strong> Freemium (la versión Premium vale mucho la pena por la sincro bancaria
+                    ilimitada).</li>
+                <li><strong>Veredicto:</strong> El rey de la automatización en Android y iOS.</li>
+            </ul>
+
+            <h2>2. Fintonic</h2>
+            <p><strong>Lo mejor para:</strong> Negociar y ahorrar.</p>
+            <p>Fintonic no solo te dice en qué gastas, sino que te avisa si te cobran comisiones duplicadas o si tu
+                seguro de coche está muy caro. Tienen un "FinScore" que te dice qué tan atractivo eres para los bancos.
+            </p>
+            <ul>
+                <li><strong>Bonus:</strong> Te ayuda a cancelar suscripciones que ya no usas.</li>
+            </ul>
+
+            <h2>3. Móbilis (Hojas de cálculo vitaminadas)</h2>
+            <p><strong>Lo mejor para:</strong> Controladores totales y amantes de Excel.</p>
+            <p>Si eres de los que prefiere tener el control manual de cada centavo, esta app ofrece una interfaz súper
+                limpia y rápida para registrar gastos manualmente. Sin conexiones bancarias, sin riesgos de privacidad
+                externos.</p>
+
+            <div class="cta-box">
+                Tip Pro: No intentes registrar cada chicle al principio. Empieza registrando solo tus gastos grandes
+                (salidas, super, compras online) para crear el hábito.
+            </div>
+
+            <h2>4. Monefy</h2>
+            <p><strong>Lo mejor para:</strong> Simplicidad visual.</p>
+            <p>¿Odias las tablas y listas? Monefy es puramente visual. Tienes íconos alrededor de una gráfica de dona.
+                Tocas "Comida", pones el monto y listo. Es extremadamente intuitiva y rápida de usar en el día a día.
+            </p>
+
+            <h2>5. La app de tu banco (Sí, en serio)</h2>
+            <p>En 2026, las apps bancarias han mejorado muchísimo. BBVA con sus "Apartados", Banamex y otros bancos ya
+                incluyen herramientas de gestión de gastos bastante potentes.</p>
+            <p><strong>¿Por qué usarla?:</strong> Ya la tienes instalada. Ya tienes tus datos ahí. A veces la mejor app
+                es la que no tienes que descargar.</p>
+
+            <h2>Conclusión</h2>
+            <p>No necesitas la app más cara ni la más compleja. Bájate una, pruébala por una semana. Si te da pereza
+                abrirla, bórrala y prueba la siguiente. El objetivo es tener <strong>consciencia</strong> de a dónde se
+                va tu dinero, no convertirte en esclavo de tu celular.</p>
+
+        </article>
+
+    </div>
+
+    <footer>
+        <div class="container-nav">
+            <div class="footer-links">
+                <a href="aviso-legal.html">Aviso Legal</a>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <a href="terminos-condiciones.html">Términos</a>
+                <a href="politica-cookies.html">Cookies</a>
+            </div>
+            <p class="copyright">© 2026 MoneySmart. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

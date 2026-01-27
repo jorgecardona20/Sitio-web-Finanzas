@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El "Latte Factor": ¿Dejar el café te hará millonario? | MoneySmart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #111827;
+            --text-secondary: #4b5563;
+            --primary: #111827;
+            --accent: #ef4444;
+            /* Red for 'myth' busting / analysis */
+            --border-color: #e5e7eb;
+            --font-main: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-main);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            /* Reading width */
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .container-nav {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Nav */
+        nav {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        /* Article Header */
+        header {
+            padding: 4rem 0 2rem;
+        }
+
+        .tag {
+            background: #fef2f2;
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e5e7eb;
+        }
+
+        /* Content */
+        .content {
+            font-size: 1.125rem;
+            color: #374151;
+        }
+
+        .content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #111827;
+            letter-spacing: -0.01em;
+        }
+
+        .content h3 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .content ul,
+        .content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-box {
+            background-color: #fef2f2;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 2.5rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--text-main);
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .featured-img {
+            width: 100%;
+            height: auto;
+            margin-top: 0;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 5rem;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-color);
+            background-color: #f9fafb;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+
+        .copyright {
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-nav">
+        <nav>
+            <a href="index.html" class="logo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                MoneySmart
+            </a>
+            <a href="index.html" class="back-link">← Volver al inicio</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <header>
+            <span class="tag">Análisis</span>
+            <h1>El "Latte Factor": ¿Dejar el café te hará millonario?</h1>
+
+            <div class="meta">
+                <div class="author-avatar"
+                    style="background-image: url('https://randomuser.me/api/portraits/women/44.jpg'); background-size: cover;">
+                </div>
+                <div>
+                    <strong>Por Ana P.</strong> • <span style="opacity: 0.8">12 Enero 2026</span>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2070&auto=format&fit=crop"
+                alt="Café vs Ahorro" class="featured-img">
+        </header>
+
+        <article class="content">
+            <p>Es el consejo financiero más trillado de la historia: "Si dejaras de comprar ese café de $5 USD todos
+                los días, ¡serías millonario en 30 años!". David Bach popularizó este concepto como el <strong>"Latte
+                    Factor"</strong>. Suena lógico, ¿verdad? Pequeños gastos diarios suman grandes cantidades a largo
+                plazo.</p>
+
+            <p>Pero, ¿realmente es así? ¿O nos estamos torturando por un café mientras ignoramos los problemas reales?
+            </p>
+
+            <h2>Las matemáticas (que duelen un poco)</h2>
+            <p>Hagamos las cuentas. Un latte de $5 USD x 365 días = <strong>$1,825 USD al año</strong>.</p>
+            <p>Si inviertes esos $1,825 USD anuales con un rendimiento del 8% durante 30 años, tendrías
+                aproximadamente <strong>$200,000 USD</strong>. No es despreciable, sin duda.</p>
+
+            <h2>El problema de la culpa</h2>
+            <p>El problema con el "Latte Factor" es psicológico. Nos hace sentir culpables por pequeños placeres que nos
+                alegran el día, mientras ignoramos "elefantes" financieros en la habitación.</p>
+
+            <div class="cta-box">
+                No te estás quedando pobre por comprar café. Te estás quedando pobre porque pagas demasiado de renta,
+                porque tu crédito automotriz tiene una tasa del 15% o porque no negocias tu salario.
+            </div>
+
+            <h2>Los "Cuatro Grandes" vs Los Gastos Hormiga</h2>
+            <p>En lugar de obsesionarte con recortar $5 USD, Ramit Sethi (autor de 'I Will Teach You To Be Rich')
+                sugiere enfocarte en las cuatro áreas que realmente mueven la aguja:</p>
+
+            <ol>
+                <li><strong>Vivienda:</strong> ¿Puedes vivir con un roomie o en una zona más barata? Ahorrar $200 USD en
+                    renta al mes equivale a 40 cafés.</li>
+                <li><strong>Transporte:</strong> ¿Realmente necesitas ese coche nuevo de agencia? Un coche seminuevo
+                    puede ahorrarte miles de dólares en depreciación.</li>
+                <li><strong>Comida:</strong> No el café, sino el súper y las salidas a cenar caras.</li>
+                <li><strong>Suscripciones y Seguros:</strong> Optimizar tu plan de celular o seguro puede ahorrarte
+                    miles al año con una sola llamada.</li>
+            </ol>
+
+            <h2>La filosofía del "Gasto Consciente"</h2>
+            <p>La propuesta de MoneySmart es diferente: <strong>Gasta extravagamente en las cosas que AMAS, y recorta
+                    despiadadamente en las que no te importan.</strong></p>
+
+            <ul>
+                <li>Si el café de la mañana es tu ritual favorito y te da energía para ser productivo: CÓMPRALO sin
+                    culpa.</li>
+                <li>Pero entonces, cancela esa suscripción a HBO que no ves, deja de comprar ropa que no necesitas o
+                    cocina más en casa.</li>
+            </ul>
+
+            <h2>Conclusión</h2>
+            <p>No dejes que los gurús financieros te quiten la alegría de vivir. Cómprate el maldito café si te hace
+                feliz. Pero asegúrate de estar ahorrando e invirtiendo en lo grande. Si cuidas los dólares grandes, los
+                centavos se cuidan solos.</p>
+
+        </article>
+
+    </div>
+
+    <footer>
+        <div class="container-nav">
+            <div class="footer-links">
+                <a href="aviso-legal.html">Aviso Legal</a>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <a href="terminos-condiciones.html">Términos</a>
+                <a href="politica-cookies.html">Cookies</a>
+            </div>
+            <p class="copyright">© 2026 MoneySmart. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

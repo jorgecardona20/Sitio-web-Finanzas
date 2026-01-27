@@ -1,0 +1,358 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin vs Ethereum: Guía para principiantes 2026 | MoneySmart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #111827;
+            --text-secondary: #4b5563;
+            --primary: #111827;
+            --accent: #f59e0b;
+            /* Orange for crypto */
+            --border-color: #e5e7eb;
+            --font-main: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-main);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            /* Reading width */
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .container-nav {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Nav (Simplified version of Index nav) */
+        nav {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        /* Article Header */
+        header {
+            padding: 4rem 0 2rem;
+        }
+
+        .tag {
+            background: #fffbeb;
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e5e7eb;
+        }
+
+        /* Content */
+        .content {
+            font-size: 1.125rem;
+            color: #374151;
+        }
+
+        .content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #111827;
+            letter-spacing: -0.01em;
+        }
+
+        .content h3 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .content ul,
+        .content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-box {
+            background-color: #fffbeb;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 2.5rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--text-main);
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .featured-img {
+            width: 100%;
+            height: auto;
+            margin-top: 0;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 5rem;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-color);
+            background-color: #f9fafb;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+
+        .copyright {
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-nav">
+        <nav>
+            <a href="index.html" class="logo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                MoneySmart
+            </a>
+            <a href="index.html" class="back-link">← Volver al inicio</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <header>
+            <span class="tag">Cripto</span>
+            <h1>Bitcoin vs Ethereum: Guía para principiantes 2026</h1>
+
+            <div class="meta">
+                <div class="author-avatar"
+                    style="background-image: url('https://randomuser.me/api/portraits/men/45.jpg'); background-size: cover;">
+                </div>
+                <div>
+                    <strong>Por Alex B.</strong> • <span style="opacity: 0.8">20 Enero 2026</span>
+                </div>
+            </div>
+
+            <img src="images/bitcoin-vs-ethereum-2026.jpg" alt="Bitcoin vs Ethereum" class="featured-img">
+        </header>
+
+        <article class="content">
+            <p>El mundo de las criptomonedas puede parecer intimidante. Noticias sobre millonarios adolescentes, caídas
+                dramáticas y tecnología compleja inundan las redes. Pero detrás del ruido, existen dos gigantes que
+                dominan el mercado y que, para 2026, se han consolidado como activos serios en portafolios de todo el
+                mundo: <strong>Bitcoin</strong> y <strong>Ethereum</strong>.</p>
+
+            <p>Si estás pensando en poner una pequeña parte de tus ahorros en cripto, es crucial que entiendas que no
+                son lo mismo. Son tecnologías diferentes con objetivos diferentes.</p>
+
+            <h2>Bitcoin: El Oro Digital</h2>
+            <p>Creado en 2009 por el misterioso Satoshi Nakamoto, Bitcoin (BTC) fue la primera criptomoneda. Su
+                propósito es simple pero poderoso: ser <strong>dinero digital descentralizado</strong>.</p>
+
+            <ul>
+                <li><strong>Escasez:</strong> Solo existirán 21 millones de Bitcoins. Ni uno más. Esto lo hace
+                    deflacionario, similar al oro.</li>
+                <li><strong>Reserva de valor:</strong> Muchos inversionistas lo ven como un refugio contra la inflación
+                    del dinero tradicional (fiat).</li>
+                <li><strong>Seguridad:</strong> Es la red computacional más segura y robusta del mundo.</li>
+            </ul>
+
+            <p><strong>¿Para quién es?</strong> Para quien busca una inversión a largo plazo (HODL) con la idea de
+                preservar valor frente a la devaluación de las monedas gubernamentales.</p>
+
+            <h2>Ethereum: La Computadora del Mundo</h2>
+            <p>Ethereum (ETH), lanzado en 2015 por Vitalik Buterin, no solo quiere ser dinero. Quiere ser una plataforma
+                para construir aplicaciones. Imagina que Bitcoin es una calculadora y Ethereum es un iPhone donde puedes
+                instalar apps.</p>
+
+            <ul>
+                <li><strong>Contratos Inteligentes:</strong> Permite crear acuerdos programables que se ejecutan solos
+                    (ej. "si pasa X, paga Y").</li>
+                <li><strong>DeFi y NFTs:</strong> La mayoría de las finanzas descentralizadas y los NFTs viven sobre la
+                    red de Ethereum.</li>
+                <li><strong>Evolución constante:</strong> A diferencia de Bitcoin que cambia poco, Ethereum se actualiza
+                    constantemente para ser más rápido y ecológico (Proof of Stake).</li>
+            </ul>
+
+            <p><strong>¿Para quién es?</strong> Para quien cree en el futuro de la web descentralizada (Web3) y quiere
+                invertir en la "infraestructura" de este nuevo internet.</p>
+
+            <div class="cta-box">
+                Advertencia: Las criptomonedas son activos VOLÁTILES. Nunca inviertas dinero que necesites para vivir a
+                corto plazo. Caídas del 30% o 50% son "normales" aquí.
+            </div>
+
+            <h2>Comparativa Rápida</h2>
+
+            <table style="width:100%; border-collapse: collapse; margin-bottom: 1.5rem; text-align: left;">
+                <thead>
+                    <tr style="border-bottom: 2px solid #e5e7eb;">
+                        <th style="padding: 1rem 0;">Característica</th>
+                        <th>Bitcoin (BTC)</th>
+                        <th>Ethereum (ETH)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                        <td style="padding: 1rem 0; font-weight: 600;">Objetivo</td>
+                        <td>Dinero / Oro Digital</td>
+                        <td>Plataforma de Aplicaciones</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                        <td style="padding: 1rem 0; font-weight: 600;">Suministro</td>
+                        <td>Límite fijo (21M)</td>
+                        <td>Sin límite fijo (pero quema monedas)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                        <td style="padding: 1rem 0; font-weight: 600;">Velocidad</td>
+                        <td>Lenta (capa base)</td>
+                        <td>Rápida (con L2s)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>¿Cuál debería comprar en 2026?</h2>
+            <p>La respuesta más común entre expertos financieros es: <strong>Ambos</strong>, pero en proporciones
+                diferentes.</p>
+            <p>Muchos sugieren una estrategia 60/40 o 70/30 a favor de Bitcoin por su menor volatilidad comparativa.
+                Ethereum ofrece mayor potencial de crecimiento explosivo, pero también mayor riesgo regulatorio y
+                técnico.</p>
+
+            <p>Lo importante es empezar con poco, usar un exchange regulado (como Bitso en México) y, sobre todo, no
+                dejar tus monedas en el exchange si es una cantidad considerable. "Not your keys, not your coins".</p>
+
+        </article>
+
+    </div>
+
+    <footer>
+        <div class="container-nav">
+            <div class="footer-links">
+                <a href="aviso-legal.html">Aviso Legal</a>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <a href="terminos-condiciones.html">Términos</a>
+                <a href="politica-cookies.html">Cookies</a>
+            </div>
+            <p class="copyright">© 2026 MoneySmart. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

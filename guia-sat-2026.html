@@ -1,0 +1,380 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La guía definitiva: Empieza a invertir con $100 USD | MoneySmart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #111827;
+            --text-secondary: #4b5563;
+            --primary: #111827;
+            --accent: #2563eb;
+            --border-color: #e5e7eb;
+            --font-main: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-main);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            /* Reading width */
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .container-nav {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Nav (Simplified version of Index nav) */
+        nav {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        /* Article Header */
+        header {
+            padding: 4rem 0 2rem;
+        }
+
+        .tag {
+            background: #f3f4f6;
+            color: #374151;
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e5e7eb;
+        }
+
+        /* Content */
+        .content {
+            font-size: 1.125rem;
+            color: #374151;
+        }
+
+        .content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #111827;
+            letter-spacing: -0.01em;
+        }
+
+        .content h3 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .content ul,
+        .content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-box {
+            background-color: #f8fafc;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 2.5rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--text-main);
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .featured-img {
+            width: 100%;
+            height: auto;
+            margin-top: 0;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 5rem;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-color);
+            background-color: #f9fafb;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+
+        .copyright {
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-nav">
+        <nav>
+            <a href="index.html" class="logo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                MoneySmart
+            </a>
+            <a href="index.html" class="back-link">← Volver al inicio</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <header>
+            <span class="tag">Adulting</span>
+            <h1>La guía definitiva: Empieza a invertir con $100 USD antes de los 25</h1>
+
+            <div class="meta">
+                <div class="author-avatar"
+                    style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg'); background-size: cover;">
+                </div>
+                <div>
+                    <strong>Por Ricardo Gómez</strong> • <span style="opacity: 0.8">22 Enero 2026</span>
+                </div>
+            </div>
+
+            <!-- NEW URL -->
+            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=2070&auto=format&fit=crop"
+                alt="Inversión" class="featured-img">
+        </header>
+
+        <article class="content">
+            <p>Si alguna vez has escuchado que "invertir es solo para ricos" o que "necesitas miles de dólares para
+                empezar", tengo buenas noticias para ti: <strong>te han mentido</strong>. Vivimos en la era dorada de
+                las fintechs, donde las barreras de entrada se han derrumbado por completo. Hoy, con lo que te cuesta un
+                café de especialidad y un pan dulce, puedes convertirte en socio de las empresas más grandes del mundo.
+            </p>
+
+            <p>En este artículo extenso y detallado, vamos a desglosar paso a paso cómo puedes empezar tu camino como
+                inversionista joven, por qué el tiempo es tu activo más valioso (mucho más que el dinero) y qué
+                instrumentos son seguros para principiantes. Prepárate, porque vamos a cambiar tu futuro financiero en
+                los próximos 10 minutos de lectura.</p>
+
+            <h2>El Poder del Interés Compuesto: Tu Mejor Amigo</h2>
+            <p>Antes de hablar de apps o acciones, necesitas entender el concepto matemático que hará todo el trabajo
+                pesado por ti: el interés compuesto. Albert Einstein supuestamente lo llamó "la octava maravilla del
+                mundo", y no exageraba.</p>
+
+            <p>El interés compuesto no es otra cosa que ganar intereses sobre tus intereses. Imagina una bola de nieve
+                rodando cuesta abajo. Al principio es pequeña, pero conforme avanza, recoge más nieve, y esa nieve
+                recoge aún más nieve. Con el dinero pasa lo mismo: tus ganancias generan nuevas ganancias.</p>
+
+            <div class="cta-box">
+                "El mayor riesgo de todos es no tomar ningún riesgo. En un mundo que cambia muy rápido, la única
+                estrategia que garantiza fallar es no correr riesgos." — Mark Zuckerberg
+            </div>
+
+            <h3>Un ejemplo práctico: Ana vs Beto</h3>
+            <p>Imagina dos personas, Ana y Beto:</p>
+            <ul>
+                <li><strong>Ana</strong> empieza a invertir $100 USD al mes a los 20 años y se detiene a los 30
+                    (invirtió 10 años).</li>
+                <li><strong>Beto</strong> espera a tener "un mejor sueldo" y empieza a los 30 años, invirtiendo $100 USD
+                    al mes hasta los 60 (invirtió 30 años).</li>
+            </ul>
+            <p>Asumiendo un retorno anual del 10% (promedio histórico del S&P 500), ¿quién crees que tendrá más dinero a
+                los 60 años? Sorprendentemente, <strong>Ana gana</strong>, a pesar de haber invertido solo una fracción
+                del tiempo que Beto. Esa es la magia de empezar joven.</p>
+
+            <!-- NEW URL -->
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200"
+                alt="Gráfica de crecimiento">
+
+            <h2>¿En qué puedo invertir con poco dinero?</h2>
+            <p>Hace 20 años, para comprar acciones necesitabas un corredor de bolsa de traje, llamadas telefónicas y
+                comisiones altísimas. Hoy, tienes opciones reguladas al alcance de tu celular.</p>
+
+            <h3>1. CETES (Certificados de la Tesorería)</h3>
+            <p>Si eres mexicano, esta es tu puerta de entrada. Los CETES son deuda del gobierno. Tú le prestas dinero al
+                gobierno y él te lo regresa con intereses. Es la inversión más segura que existe en México.</p>
+            <ul>
+                <li><strong>Ventajas:</strong> Desde $5 USD, riesgo casi nulo, plazos flexibles (28 días, 1 año).
+                </li>
+                <li><strong>Desventajas:</strong> Rendimientos moderados (aunque recientemente han estado muy buenos).
+                </li>
+            </ul>
+
+            <h3>2. ETFs (Fondos Cotizados en Bolsa)</h3>
+            <p>Comprar una acción de una sola empresa (como Apple o Tesla) puede ser riesgoso. ¿Qué pasa si esa empresa
+                quiebra? Pierdes tu dinero. Aquí entran los ETFs.</p>
+            <p>Un ETF es como una canasta de frutas. En lugar de comprar una manzana, compras la canasta entera que trae
+                manzanas, peras, uvas, etc. El ETF más famoso es el que sigue al <strong>S&P 500</strong>, que incluye a
+                las 500 empresas más grandes de Estados Unidos. Comprando un solo título, te haces dueño de un pedacito
+                de las 500 mejores compañías.</p>
+
+            <h3>3. SOFIPOS (Sociedades Financieras Populares)</h3>
+            <p>Son instituciones que funcionan parecido a los bancos pero suelen ofrecer mejores tasas de interés para
+                atraer clientes. Muchas ofrecen cuentas a la vista o inversiones a plazo fijo con rendimientos
+                superiores a CETES.</p>
+            <p><strong>Ojo:</strong> Asegúrate de que estén reguladas por la CNBV y aprovecha el seguro PROSOFIPO que
+                protege tus ahorros hasta por ciertas cantidades (aprox $10,000 USD).</p>
+
+            <h2>Pasos para empezar hoy mismo</h2>
+            <p>La teoría está muy bien, pero la acción es lo que cuenta. Aquí tienes tu hoja de ruta:</p>
+
+            <ol>
+                <li><strong>Haz un presupuesto:</strong> No puedes invertir dinero que necesitas para la renta. Invierte
+                    solo lo que te "sobre" (o mejor dicho, lo que apartes conscientemente).</li>
+                <li><strong>Crea tu Fondo de Emergencia:</strong> Antes de invertir en riesgo, junta 3 meses de tus
+                    gastos en una cuenta líquida y segura (como Bonddia en Cetesdirecto).</li>
+                <li><strong>Elige una plataforma regulada:</strong> No caigas en estafas de "dinero rápido". Busca
+                    plataformas supervisadas por la CNBV en México (Cetesdirecto, GBM+, Finsus, etc.).</li>
+                <li><strong>Automatiza:</strong> La fuerza de voluntad falla, la automatización no. Configura retiros
+                    automáticos de tu cuenta de nómina a tu cuenta de inversión cada quincena.</li>
+            </ol>
+
+            <!-- NEW URL -->
+            <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&w=1200"
+                alt="Planeación financiera">
+
+            <h2>Errores comunes de novatos (Evítalos)</h2>
+            <p>He visto a muchos amigos perder dinero por impacientes. Aquí los errores clásicos:</p>
+            <ul>
+                <li><strong>Vender cuando el mercado baja:</strong> Si tus acciones bajan de precio, NO has perdido
+                    dinero hasta que vendes. Si confías en la economía a largo plazo, las bajadas son "descuentos".</li>
+                <li><strong>Seguir consejos de TikTok:</strong> Muchos "gurús" te recomendarán criptomonedas
+                    desconocidas solo porque les pagan publicidad. Haz tu propia investigación (DYOR).</li>
+                <li><strong>No diversificar:</strong> "No pongas todos los huevos en la misma canasta". Si todo tu
+                    dinero está en una sola empresa y esta cae, sufres.</li>
+            </ul>
+
+            <h2>Conclusión</h2>
+            <p>Invertir no es un sprint de 100 metros, es un maratón. No te vas a hacer millonario de la noche a la
+                mañana (y quien te prometa eso te quiere estafar), pero si empiezas hoy, con disciplina y constancia, tu
+                "yo" del futuro te lo agradecerá infinitamente.</p>
+            <p>Empieza con $5 USD. Empieza con miedo. Pero empieza.</p>
+        </article>
+
+    </div>
+
+    <footer>
+        <div class="container-nav">
+            <div class="footer-links">
+                <a href="aviso-legal.html">Aviso Legal</a>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <a href="terminos-condiciones.html">Términos</a>
+                <a href="politica-cookies.html">Cookies</a>
+            </div>
+            <p class="copyright">© 2026 MoneySmart. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+<!-- Correctly closed html manually to ensure no errors -->
+
+</html>

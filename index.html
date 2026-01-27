@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneySmart | Finanzas Joven</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #111827;
+            --text-secondary: #6b7280;
+            --primary: #111827;
+            --accent: #2563eb;
+            --border-color: #e5e7eb;
+            --font-main: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid transparent;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            z-index: 20;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            z-index: 20;
+        }
+
+        .btn-outline {
+            padding: 0.6rem 1.2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--text-main);
+            background: #f9fafb;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0 5rem;
+        }
+
+        .featured-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            height: 500px;
+            display: flex;
+            align-items: flex-end;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .featured-card:hover .featured-bg {
+            transform: scale(1.03);
+        }
+
+        .featured-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            z-index: 1;
+        }
+
+        .featured-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
+            z-index: 2;
+        }
+
+        .featured-content {
+            position: relative;
+            z-index: 3;
+            padding: 2.5rem;
+            width: 100%;
+        }
+
+        .tag-pill {
+            background-color: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(4px);
+            padding: 0.35rem 0.75rem;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: white;
+        }
+
+        .featured-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .section-header {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .sidebar-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .sidebar-item {
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .sidebar-item:first-child {
+            padding-top: 0;
+        }
+
+        .sidebar-item:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-item:hover .sidebar-heading {
+            color: var(--accent);
+        }
+
+        .sidebar-thumb {
+            width: 100px;
+            height: 75px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+            background-color: #f3f4f6;
+        }
+
+        .sidebar-heading {
+            font-size: 1.05rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 0.25rem;
+            color: var(--text-main);
+            transition: color 0.2s;
+        }
+
+        .meta {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* Grid Header */
+        .grid-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .grid-header h2 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        /* Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 5rem;
+        }
+
+        .post-card {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            height: 100%;
+        }
+
+        .post-card:hover .post-thumb {
+            transform: scale(1.05);
+        }
+
+        .post-card:hover .post-title {
+            color: var(--accent);
+        }
+
+        .post-thumb-wrapper {
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+            background: #f3f4f6;
+        }
+
+        .post-thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+            background-color: #e2e8f0;
+        }
+
+        .card-category {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .post-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+            transition: color 0.2s;
+        }
+
+        .post-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            line-height: 1.6;
+        }
+
+        .post-author {
+            margin-top: auto;
+            padding-top: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .author-img {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+        }
+
+        .author-info {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .author-info span {
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f9fafb;
+            border-top: 1px solid var(--border-color);
+            padding: 4rem 1.5rem;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+
+        .copyright {
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 900px) {
+            .hero-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                margin-top: 1.5rem;
+            }
+
+            .featured-card {
+                height: 400px;
+            }
+
+            .featured-title {
+                font-size: 1.75rem;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                /* Hidden by default */
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1.5rem;
+                border-bottom: 1px solid var(--border-color);
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+                gap: 1rem;
+                z-index: 10;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-actions {
+                display: none;
+            }
+
+            /* Simplify for mobile */
+            .nav-actions.mobile {
+                display: flex;
+                margin-top: 1rem;
+            }
+
+            .sidebar {
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <a href="index.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                MoneySmart
+            </a>
+
+            <button class="mobile-menu-btn"
+                onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="invertir-100-pesos.html">Inversión</a>
+                <a href="meal-prep-ahorro.html">Ahorro</a>
+                <a href="bitcoin-ethereum-guia.html">Cripto</a>
+                <a href="#blog">Blog</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="#" class="btn-outline">Suscribirse</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero-section">
+            <!-- Featured Left -->
+            <!-- Featured Left -->
+            <a href="trampa-suscripciones.html" class="featured-card">
+                <img src="images/suscripciones.png" alt="Trampa de Suscripciones" class="featured-bg">
+                <div class="featured-overlay"></div>
+                <div class="featured-content">
+                    <span class="tag-pill">Destacado</span>
+                    <h1 class="featured-title">La trampa de las suscripciones (Gastos Hormiga)</h1>
+                    <p class="meta" style="color: rgba(255,255,255,0.9);">Por David L. • 14 Ene 2026</p>
+                </div>
+            </a>
+
+            <!-- Sidebar Right -->
+            <div class="sidebar">
+                <h3 class="section-header">Tendencias de la semana</h3>
+                <div class="sidebar-list">
+
+                    <a href="apps-presupuesto.html" class="sidebar-item">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=150&auto=format&fit=crop"
+                            class="sidebar-thumb" alt="Productividad">
+                        <div class="sidebar-content">
+                            <h4 class="sidebar-heading">5 Apps de presupuesto que sí vas a usar realmente</h4>
+                            <span class="meta">Tecnología • 4 min</span>
+                        </div>
+                    </a>
+
+                    <a href="latte-factor-mito.html" class="sidebar-item">
+                        <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=150&auto=format&fit=crop"
+                            class="sidebar-thumb" alt="Café">
+                        <div class="sidebar-content">
+                            <h4 class="sidebar-heading">El "Latte Factor": ¿Dejar el café te hará millonario?</h4>
+                            <span class="meta">Análisis • 6 min</span>
+                        </div>
+                    </a>
+
+                    <a href="freelance-guia.html" class="sidebar-item">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=150&auto=format&fit=crop"
+                            class="sidebar-thumb" alt="Freelance">
+                        <div class="sidebar-content">
+                            <h4 class="sidebar-heading">Cómo cobrar tus primeros trabajos freelance sin miedo</h4>
+                            <span class="meta">Carrera • 8 min</span>
+                        </div>
+                    </a>
+
+                    <a href="bitcoin-ethereum-guia.html" class="sidebar-item">
+                        <img src="images/bitcoin-vs-ethereum-2026.jpg" class="sidebar-thumb" alt="Cripto">
+                        <div class="sidebar-content">
+                            <h4 class="sidebar-heading">Bitcoin vs Ethereum: Guía para principiantes 2026</h4>
+                            <span class="meta">Cripto • 12 min</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Grid -->
+        <div class="grid-header">
+            <h2>Artículos Recientes</h2>
+            <a href="#" class="btn-outline">Ver Todo</a>
+        </div>
+
+        <div class="grid-container">
+
+            <!-- Post 1: Ahorro (Jars) -->
+            <a href="fondo-emergencia.html" class="post-card">
+                <div class="post-thumb-wrapper">
+                    <img src="images/fondo-emergencia.png" class="post-thumb" alt="Fondo Emergencia">
+                </div>
+                <div>
+                    <span class="card-category" style="color: #6366f1;">Básicos</span>
+                    <h3 class="post-title">Fondo de Emergencia: ¿Cuánto realmente necesito?</h3>
+                    <p class="post-desc">No, $500 USD no son suficientes. Aprende a calcular tu red de seguridad ideal
+                        sin estresarte.</p>
+                    <div class="post-author">
+                        <img src="https://randomuser.me/api/portraits/women/11.jpg" class="author-img" alt="Avatar">
+                        <div class="author-info">Sofía R. <span>• 5 min</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post 2: Tarjetas (Card) -->
+            <a href="tarjetas-credito-guia.html" class="post-card">
+                <div class="post-thumb-wrapper">
+                    <img src="images/tarjetas-credito.png" class="post-thumb" alt="Tarjetas">
+                </div>
+                <div>
+                    <span class="card-category" style="color: #ef4444;">Deuda</span>
+                    <h3 class="post-title">Tarjetas de Crédito: Guía para no pagar intereses</h3>
+                    <p class="post-desc">Cómo usar tu primera tarjeta para ganar puntos y generar historial crediticio
+                        positivo.</p>
+                    <div class="post-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="author-img" alt="Avatar">
+                        <div class="author-info">Carlos M. <span>• 7 min</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post 3: Viajes (Map) -->
+            <a href="viajar-barato-estudiante.html" class="post-card">
+                <div class="post-thumb-wrapper">
+                    <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&auto=format&fit=crop"
+                        class="post-thumb" alt="Viajes">
+                </div>
+                <div>
+                    <span class="card-category" style="color: #10b981;">Lifestyle</span>
+                    <h3 class="post-title">Hacks para viajar barato siendo estudiante</h3>
+                    <p class="post-desc">Hostales, vuelos con error y voluntariados. Conoce el mundo sin vaciar tu
+                        cuenta.</p>
+                    <div class="post-author">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" class="author-img" alt="Avatar">
+                        <div class="author-info">Laura V. <span>• 12 min</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post 4: SAT (Calc/Papers) -->
+            <a href="guia-sat-2026.html" class="post-card">
+                <div class="post-thumb-wrapper">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&auto=format&fit=crop"
+                        class="post-thumb" alt="SAT">
+                </div>
+                <div>
+                    <span class="card-category" style="color: #f59e0b;">Adulting</span>
+                    <h3 class="post-title">Guía de supervivencia para el SAT 2026</h3>
+                    <p class="post-desc">RFC, firma electrónica y declaraciones anuales explicadas para humanos
+                        normales.</p>
+                    <div class="post-author">
+                        <img src="https://randomuser.me/api/portraits/men/88.jpg" class="author-img" alt="Avatar">
+                        <div class="author-info">Roberto G. <span>• 8 min</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post 5: Minimalismo (Clean desk) -->
+            <a href="minimalismo-financiero.html" class="post-card">
+                <div class="post-thumb-wrapper">
+                    <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=800&auto=format&fit=crop"
+                        class="post-thumb" alt="Minimalismo">
+                </div>
+                <div>
+                    <span class="card-category" style="color: #8b5cf6;">Filosofía</span>
+                    <h3 class="post-title">Minimalismo Financiero: Menos cosas, más paz</h3>
+                    <p class="post-desc">Cómo dejar de comprar por impulso cambió mi cuenta de banco y mi salud mental.
+                    </p>
+                    <div class="post-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="author-img" alt="Avatar">
+                        <div class="author-info">Ana P. <span>• 6 min</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post 6: Streaming (Remote) -->
+            <!-- Post 6: Inversión (Moved from Hero) -->
+            <a href="invertir-100-pesos.html" class="post-card">
+                <div class="post-thumb-wrapper">
+                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=800&auto=format&fit=crop"
+                        class="post-thumb" alt="Inversión">
+                </div>
+                <div>
+                    <span class="card-category" style="color: #10b981;">Inversión</span>
+                    <h3 class="post-title">La guía definitiva: Empieza a invertir con $100 USD</h3>
+                    <p class="post-desc">No necesitas ser millonario. Descubre cómo el interés compuesto y $100 USD
+                        pueden cambiar tu futuro.</p>
+                    <div class="post-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="author-img" alt="Avatar">
+                        <div class="author-info">Ricardo G. <span>• 10 min</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post 7: Vivienda (Keys) -->
+            <a href="rentar-o-comprar.html" class="post-card">
+                <div class="post-thumb-wrapper">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop"
+                        class="post-thumb" alt="Casa">
+                </div>
+                <div>
+                    <span class="card-category" style="color: #14b8a6;">Vivienda</span>
+                    <h3 class="post-title">¿Rentar o Comprar? La verdad incómoda</h3>
+                    <p class="post-desc">Por qué rentar no es "tirar el dinero" en tus 20s. Un análisis financiero
+                        honesto.</p>
+                    <div class="post-author">
+                        <img src="https://randomuser.me/api/portraits/women/23.jpg" class="author-img" alt="Avatar">
+                        <div class="author-info">Carmen S. <span>• 10 min</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post 8: NFT (Digital Art) -->
+            <a href="nfts-2026.html" class="post-card">
+                <div class="post-thumb-wrapper">
+                    <img src="https://images.unsplash.com/photo-1620321023374-d1a68fbc720d?w=800&auto=format&fit=crop"
+                        class="post-thumb" alt="NFT">
+                </div>
+                <div>
+                    <span class="card-category" style="color: #6366f1;">Cripto</span>
+                    <h3 class="post-title">¿Siguen vivos los NFTs en 2026?</h3>
+                    <p class="post-desc">Analizamos el mercado actual y si vale la pena tener arte digital en tu
+                        cartera.</p>
+                    <div class="post-author">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" class="author-img" alt="Avatar">
+                        <div class="author-info">Alex B. <span>• 9 min</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post 9: Salario (Handshake) -->
+            <a href="negociar-salario.html" class="post-card">
+                <div class="post-thumb-wrapper">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop"
+                        class="post-thumb" alt="Negocios">
+                </div>
+                <div>
+                    <span class="card-category" style="color: #8b5cf6;">Carrera</span>
+                    <h3 class="post-title">Cómo negociar tu salario sin morir de nervios</h3>
+                    <p class="post-desc">Scripts exactos para pedir lo que vales en tu primera entrevista de trabajo.
+                    </p>
+                    <div class="post-author">
+                        <img src="https://randomuser.me/api/portraits/women/90.jpg" class="author-img" alt="Avatar">
+                        <div class="author-info">Elena R. <span>• 14 min</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post 10: Meal Prep (Food) -->
+            <a href="meal-prep-ahorro.html" class="post-card">
+                <div class="post-thumb-wrapper">
+                    <img src="images/meal-prep.jpg" class="post-thumb" alt="Comida">
+                </div>
+                <div>
+                    <span class="card-category" style="color: #f59e0b;">Ahorro</span>
+                    <h3 class="post-title">Meal Prep: Ahorra $3,000 al mes cocinando</h3>
+                    <p class="post-desc">Guía para cocinar un domingo y comer rico toda la semana sin gastar en
+                        delivery.</p>
+                    <div class="post-author">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" class="author-img" alt="Avatar">
+                        <div class="author-info">Paco Chef <span>• 6 min</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post 11: Seguros (Papers) -->
+            <a href="seguros-medicos.html" class="post-card">
+                <div class="post-thumb-wrapper">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&auto=format&fit=crop"
+                        class="post-thumb" alt="Seguros">
+                </div>
+                <div>
+                    <span class="card-category" style="color: #10b981;">Protección</span>
+                    <h3 class="post-title">Seguros: El único gasto que esperas nunca usar</h3>
+                    <p class="post-desc">Gastos Médicos Mayores: Por qué es indispensable si ya no estás en la póliza de
+                        tus papás.</p>
+                    <div class="post-author">
+                        <img src="https://randomuser.me/api/portraits/women/33.jpg" class="author-img" alt="Avatar">
+                        <div class="author-info">Dra. Sara <span>• 8 min</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post 12: Libros (Books) -->
+            <a href="libros-finanzas.html" class="post-card">
+                <div class="post-thumb-wrapper">
+                    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&auto=format&fit=crop"
+                        class="post-thumb" alt="Libros">
+                </div>
+                <div>
+                    <span class="card-category" style="color: #3b82f6;">Educación</span>
+                    <h3 class="post-title">5 Libros de Dinero que no son aburridos</h3>
+                    <p class="post-desc">Desde 'Pequeño Cerdo Capitalista' hasta 'Psicología del Dinero'. Lecturas
+                        obligadas.</p>
+                    <div class="post-author">
+                        <img src="https://randomuser.me/api/portraits/men/21.jpg" class="author-img" alt="Avatar">
+                        <div class="author-info">BookWorm <span>• 5 min</span></div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="aviso-legal.html">Aviso Legal</a>
+                <a href="politica-privacidad.html">Política de Privacidad</a>
+                <a href="terminos-condiciones.html">Términos y Condiciones</a>
+                <a href="politica-cookies.html">Política de Cookies</a>
+                <a href="#">Contacto</a>
+            </div>
+            <p class="copyright">© 2026 MoneySmart. Este sitio no ofrece asesoramiento financiero profesional. Invierte
+                bajo tu propio riesgo.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
